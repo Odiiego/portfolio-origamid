@@ -6,15 +6,15 @@
 }
 
 body {
-  background-color: #0f0f0f;
+  background-color: #0F0F0F;
 }
 body #home {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(./assets/first_decorator.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -23,8 +23,8 @@ body #home {
 body #home header {
   display: flex;
   justify-content: space-around;
-  width: 90%;
-  margin-top: 120px;
+  width: min(100%, 1440px);
+  margin: 120px 0;
 }
 body #home header .title-container h1 {
   width: 5ch;
@@ -43,13 +43,14 @@ body #home header .title-container h2 {
   font-family: "Fira Sans";
   font-size: 40px;
   font-weight: 400;
+  line-height: 40px;
   color: #00B5CE;
   margin-top: 40px;
 }
 body #home header .image-container {
   position: relative;
-  width: 400px;
-  height: 400px;
+  min-width: 400px;
+  min-height: 400px;
   border: 3px solid #5BF7FF;
   transform: translateX(-40px) translateY(40px);
   background-image: url(./assets/hero.png);
@@ -57,17 +58,14 @@ body #home header .image-container {
 }
 body #home header .image-container img {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  min-width: 400px;
+  min-height: 400px;
   border: 3px solid #5BF7FF;
   transform: translateX(37px) translateY(-43px);
 }
 body #home nav {
-  position: relative;
-  margin-top: 240px;
-  margin-left: calc(37% + 5px);
-  width: 600px;
-  color: #BCBCBC;
+  margin: auto 0 15vh auto;
+  width: min(750px, 60%);
   border-bottom: 3px solid #5BF7FF;
 }
 body #home nav .nav-list {
@@ -76,14 +74,26 @@ body #home nav .nav-list {
   font-family: "Fira Sans";
   font-size: 32px;
   list-style: none;
-  width: 560px;
+  width: min(560px, 80%);
 }
 body #home nav .nav-list-item {
   width: 190px;
   text-align: center;
   padding-bottom: 3px;
 }
-body #home nav .nav-list .active {
+body #home nav .nav-list-link {
+  display: block;
+  text-decoration: none;
+  color: #BCBCBC;
+}
+body #home nav .nav-list-link:hover {
+  color: white;
+}
+body #home nav .nav-list #active {
   padding-bottom: 0;
   border-bottom: 3px solid #5BF7FF;
+  font-weight: bold;
+}
+body #home nav .nav-list #active a {
+  color: #E5E5E5;
 }/*# sourceMappingURL=style.css.map */
