@@ -17,25 +17,36 @@ $border: 3px solid var(--blue1);
     box-sizing: border-box;
 }
 
+@mixin section-config {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin header-config {
+    display: flex;
+    justify-content: space-around;
+    width: min(100%, 1440px);
+}
+
 body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: #0F0F0F;
 
     #home {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        min-height: 100vh;
+        @include section-config;
         background-image: url(./assets/home_decorator.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
 
         header {
-            display: flex;
-            justify-content: space-around;
-            width: min(100%, 1440px);
+            @include header-config;
             margin: 120px 0;
 
             .title-container {
@@ -122,6 +133,42 @@ body {
                     }
                 }
             }
+        }
+    }
+
+    #projetos {
+        @include section-config;
+
+        header {
+            @include header-config;
+
+            .section-title {
+                color: var(--gray1);
+                font-family: var(--display-font);
+                font-weight: bold;
+                font-size: 95px;
+
+                .decorator {
+                    color: var(--blue1);
+                }
+            }
+
+            .section-description {
+                color: var(--gray2);
+                font-family: var(--main-font);
+                margin: 160px 0 80px 0;
+                text-indent: 4ch;
+                width: 49ch;
+                a {
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: var(--gray1);
+                }
+            }
+        }
+
+        .card-tech-list {
+            &-item {}
         }
     }
 }
