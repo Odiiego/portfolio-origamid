@@ -15,6 +15,7 @@ $border: 3px solid var(--blue1);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--main-font);
 }
 
 @mixin section-config {
@@ -61,12 +62,12 @@ body {
                     span {
                         font-size: 128px;
                         font-weight: 900;
+                        font-family: var(--display-font);
                     }
                 }
 
                 h2 {
                     width: 10ch;
-                    font-family: var(--main-font);
                     font-size: 40px;
                     font-weight: 400;
                     line-height: 40px;
@@ -102,7 +103,6 @@ body {
             .nav-list {
                 display: flex;
                 justify-content: space-around;
-                font-family: var(--main-font);
                 font-size: 32px;
                 list-style: none;
                 width: min(560px, 80%);
@@ -138,6 +138,7 @@ body {
 
     #projetos {
         @include section-config;
+        background-image: url(./assets/projeto_decorator.png);
 
         header {
             @include header-config;
@@ -155,10 +156,11 @@ body {
 
             .section-description {
                 color: var(--gray2);
-                font-family: var(--main-font);
+                font-size: 24px;
                 margin: 160px 0 80px 0;
                 text-indent: 4ch;
                 width: 49ch;
+
                 a {
                     text-decoration: none;
                     font-weight: bold;
@@ -167,8 +169,63 @@ body {
             }
         }
 
-        .card-tech-list {
-            &-item {}
+        .card-container {
+            position: relative;
+            transform: translateX(-10px) translateY(10px);
+            background-image: url(./assets/projeto_bg.png);
+            background-size: cover;
+            border: 3px solid var(--blue1);
+            width: min(90%, 950px);
+            margin-bottom: 2rem;
+
+            .card {
+                position: relative;
+                transform: translateX(13px) translateY(-13px);
+                background-color: #0F0F0F;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                border: 3px solid var(--blue1);
+                padding: 1rem 2rem;
+                width: 100%;
+
+                &-header {
+                    margin-right: 1rem;
+
+                    &-title {
+                        color: var(--gray1);
+                        font-weight: bold;
+                        font-size: 32px;
+                    }
+
+                    &-description {
+                        color: var(--gray2);
+                        margin-top: 20px;
+                        text-indent: 4ch;
+                        font-size: 20px;
+                        max-width: 56ch;
+                    }
+                }
+
+                &-tech-list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    list-style: none;
+                    width: 25ch;
+                    height: min-content;
+
+                    &-item {
+                        border: 2px solid var(--blue1);
+                        border-radius: 10px;
+                        color: white;
+                        font-size: 20px;
+                        padding: 5px;
+                        margin: 0 10px 10px 0;
+                        height: fit-content;
+                    }
+                }
+            }
         }
     }
 }

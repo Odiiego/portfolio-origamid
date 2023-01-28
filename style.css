@@ -12,6 +12,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: var(--main-font);
 }
 
 body {
@@ -49,10 +50,10 @@ body #home header .title-container h1 {
 body #home header .title-container h1 span {
   font-size: 128px;
   font-weight: 900;
+  font-family: var(--display-font);
 }
 body #home header .title-container h2 {
   width: 10ch;
-  font-family: var(--main-font);
   font-size: 40px;
   font-weight: 400;
   line-height: 40px;
@@ -83,7 +84,6 @@ body #home nav {
 body #home nav .nav-list {
   display: flex;
   justify-content: space-around;
-  font-family: var(--main-font);
   font-size: 32px;
   list-style: none;
   width: min(560px, 80%);
@@ -119,6 +119,7 @@ body #projetos {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url(./assets/projeto_decorator.png);
 }
 body #projetos header {
   display: flex;
@@ -136,7 +137,7 @@ body #projetos header .section-title .decorator {
 }
 body #projetos header .section-description {
   color: var(--gray2);
-  font-family: var(--main-font);
+  font-size: 24px;
   margin: 160px 0 80px 0;
   text-indent: 4ch;
   width: 49ch;
@@ -145,4 +146,60 @@ body #projetos header .section-description a {
   text-decoration: none;
   font-weight: bold;
   color: var(--gray1);
+}
+body #projetos .card-container {
+  position: relative;
+  transform: translateX(-10px) translateY(10px);
+  background-image: url(./assets/projeto_bg.png);
+  background-size: cover;
+  border: 3px solid var(--blue1);
+  width: min(90%, 950px);
+  margin-bottom: 2rem;
+}
+body #projetos .card-container .card {
+  position: relative;
+  transform: translateX(13px) translateY(-13px);
+  background-color: #0F0F0F;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 3px solid var(--blue1);
+  padding: 1rem 2rem;
+  width: 100%;
+}
+body #projetos .card-container .card-header {
+  margin-right: 1rem;
+}
+body #projetos .card-container .card-header-title {
+  color: var(--gray1);
+  font-weight: bold;
+  font-size: 32px;
+}
+body #projetos .card-container .card-header-description {
+  color: var(--gray2);
+  margin-top: 20px;
+  text-indent: 4ch;
+  font-size: 20px;
+  max-width: 56ch;
+}
+body #projetos .card-container .card-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 25ch;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+body #projetos .card-container .card-tech-list-item {
+  border: 2px solid var(--blue1);
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+  margin: 0 10px 10px 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }/*# sourceMappingURL=style.css.map */
