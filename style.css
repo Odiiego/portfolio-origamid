@@ -76,10 +76,16 @@ body #home header .image-container img {
   border: 3px solid var(--blue1);
   transform: translateX(37px) translateY(-43px);
 }
+body #home .sticky {
+  position: fixed;
+  top: 2rem;
+  right: 0;
+}
 body #home nav {
   margin: auto 0 15vh auto;
   width: min(750px, 60%);
   border-bottom: 3px solid var(--blue1);
+  z-index: 1;
 }
 body #home nav .nav-list {
   display: flex;
@@ -125,6 +131,7 @@ body #projetos header {
   display: flex;
   justify-content: space-around;
   width: min(100%, 1440px);
+  margin-top: 120px;
 }
 body #projetos header .section-title {
   color: var(--gray1);
@@ -138,7 +145,7 @@ body #projetos header .section-title .decorator {
 body #projetos header .section-description {
   color: var(--gray2);
   font-size: 24px;
-  margin: 160px 0 80px 0;
+  margin: 160px 0 20px 0;
   text-indent: 4ch;
   width: 49ch;
 }
