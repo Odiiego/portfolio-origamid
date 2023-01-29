@@ -78,7 +78,7 @@ body #home header .image-container img {
 }
 body #home .sticky {
   position: fixed;
-  top: 2rem;
+  top: 40px;
   right: 0;
 }
 body #home nav {
@@ -145,7 +145,7 @@ body #projetos header .section-title .decorator {
 body #projetos header .section-description {
   color: var(--gray2);
   font-size: 24px;
-  margin: 160px 0 20px 0;
+  margin: 160px 0 3rem 0;
   text-indent: 4ch;
   width: 49ch;
 }
@@ -161,7 +161,7 @@ body #projetos .card-container {
   background-size: cover;
   border: 3px solid var(--blue1);
   width: min(90%, 950px);
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 body #projetos .card-container .card {
   position: relative;

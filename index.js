@@ -19,16 +19,17 @@ navList.forEach((item) => {
 
 console.log(sticky)
 window.onscroll = function () {
-    const i = Math.floor(window.pageYOffset / window.innerHeight)
+    const i = Math.round(window.pageYOffset / window.innerHeight) - 1
+    console.log(i)
 
-    Array.from(document.getElementsByClassName("nav-list-link")).forEach((child, index) => {
-        if (index + 1 == i) {
-            child.parentElement.id = "active"
-        }
-    })
+    if (i>= 0) {
+        const nav = Array.from(document.getElementsByClassName("nav-list-link"))
+        nav[i].parentElement.id = "active"
+    }
 
-    if (window.pageYOffset >= sticky) {
+    if (window.pageYOffset + 40 >= sticky) {
         navbar.classList.add("sticky")
+
     } else {
         navbar.classList.remove("sticky")
         removeActive()
