@@ -32,11 +32,11 @@ window.onscroll = function () {
         navbar.classList.remove("sticky")
     }
 
-    if (yOffset >= (contato * 0.7)) {
+    if (yOffset >= contato) {
         nav[2].parentElement.id = "active"
-    } else if (yOffset >= (cursos * 0.7)) {
+    } else if (yOffset >= cursos) {
         nav[1].parentElement.id = "active"
-    } else if (yOffset >= (projetos * 0.7)) {
+    } else if (yOffset >= projetos) {
         nav[0].parentElement.id = "active"
     }
 }

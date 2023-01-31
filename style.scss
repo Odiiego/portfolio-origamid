@@ -28,12 +28,42 @@ $border: 3px solid var(--blue1);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    header {
+        @include header-config;
+
+        .section-title {
+            color: var(--gray1);
+            font-family: var(--display-font);
+            font-weight: bold;
+            font-size: 95px;
+
+            .decorator {
+                color: var(--blue1);
+            }
+        }
+
+        .section-description {
+            color: var(--gray2);
+            font-size: 24px;
+            margin: 160px 0 3rem 0;
+            text-indent: 4ch;
+            width: 49ch;
+
+            a {
+                text-decoration: none;
+                font-weight: bold;
+                color: var(--gray1);
+            }
+        }
+    }
 }
 
 @mixin header-config {
     display: flex;
     justify-content: space-around;
     width: min(100%, 1440px);
+    margin-top: 120px;
 }
 
 body {
@@ -41,7 +71,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: #0F0F0F;
-    
+
     #home {
         @include section-config;
         background-image: url(./assets/home_decorator.png);
@@ -147,35 +177,7 @@ body {
         @include section-config;
         background-image: url(./assets/projeto_decorator.png);
 
-        header {
-            @include header-config;
-            margin-top: 120px;
 
-            .section-title {
-                color: var(--gray1);
-                font-family: var(--display-font);
-                font-weight: bold;
-                font-size: 95px;
-
-                .decorator {
-                    color: var(--blue1);
-                }
-            }
-
-            .section-description {
-                color: var(--gray2);
-                font-size: 24px;
-                margin: 160px 0 3rem 0;
-                text-indent: 4ch;
-                width: 49ch;
-
-                a {
-                    text-decoration: none;
-                    font-weight: bold;
-                    color: var(--gray1);
-                }
-            }
-        }
 
         .card-container {
             position: relative;
@@ -235,5 +237,13 @@ body {
                 }
             }
         }
+    }
+
+    #cursos {
+        @include section-config;
+    }
+
+    #contato {
+        @include section-config;
     }
 }

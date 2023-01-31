@@ -37,6 +37,34 @@ body #home header {
   display: flex;
   justify-content: space-around;
   width: min(100%, 1440px);
+  margin-top: 120px;
+}
+body #home header .section-title {
+  color: var(--gray1);
+  font-family: var(--display-font);
+  font-weight: bold;
+  font-size: 95px;
+}
+body #home header .section-title .decorator {
+  color: var(--blue1);
+}
+body #home header .section-description {
+  color: var(--gray2);
+  font-size: 24px;
+  margin: 160px 0 3rem 0;
+  text-indent: 4ch;
+  width: 49ch;
+}
+body #home header .section-description a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--gray1);
+}
+body #home header {
+  display: flex;
+  justify-content: space-around;
+  width: min(100%, 1440px);
+  margin-top: 120px;
   margin: 120px 0;
 }
 body #home header .title-container h1 {
@@ -209,4 +237,80 @@ body #projetos .card-container .card-tech-list-item {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+body #cursos {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body #cursos header {
+  display: flex;
+  justify-content: space-around;
+  width: min(100%, 1440px);
+  margin-top: 120px;
+}
+body #cursos header .section-title {
+  color: var(--gray1);
+  font-family: var(--display-font);
+  font-weight: bold;
+  font-size: 95px;
+}
+body #cursos header .section-title .decorator {
+  color: var(--blue1);
+}
+body #cursos header .section-description {
+  color: var(--gray2);
+  font-size: 24px;
+  margin: 160px 0 3rem 0;
+  text-indent: 4ch;
+  width: 49ch;
+}
+body #cursos header .section-description a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--gray1);
+}
+body #contato {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body #contato header {
+  display: flex;
+  justify-content: space-around;
+  width: min(100%, 1440px);
+  margin-top: 120px;
+}
+body #contato header .section-title {
+  color: var(--gray1);
+  font-family: var(--display-font);
+  font-weight: bold;
+  font-size: 95px;
+}
+body #contato header .section-title .decorator {
+  color: var(--blue1);
+}
+body #contato header .section-description {
+  color: var(--gray2);
+  font-size: 24px;
+  margin: 160px 0 3rem 0;
+  text-indent: 4ch;
+  width: 49ch;
+}
+body #contato header .section-description a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--gray1);
 }/*# sourceMappingURL=style.css.map */
