@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Playfair+Display:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&family=Playfair+Display:wght@400;500;700;900&display=swap");
 :root {
   --blue1: #5BF7FF;
   --blue2: #00B5CE;
@@ -13,6 +13,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: var(--main-font);
+  text-decoration: none;
 }
 
 body {
@@ -51,12 +52,11 @@ body #home header .section-title .decorator {
 body #home header .section-description {
   color: var(--gray2);
   font-size: 24px;
-  margin: 160px 0 3rem 0;
+  margin: 160px 2rem 3rem 0;
   text-indent: 4ch;
-  width: 49ch;
+  width: 40ch;
 }
 body #home header .section-description a {
-  text-decoration: none;
   font-weight: bold;
   color: var(--gray1);
 }
@@ -129,7 +129,6 @@ body #home nav .nav-list-item {
 }
 body #home nav .nav-list-link {
   display: block;
-  text-decoration: none;
   color: var(--gray2);
 }
 body #home nav .nav-list-link:hover {
@@ -173,12 +172,11 @@ body #projetos header .section-title .decorator {
 body #projetos header .section-description {
   color: var(--gray2);
   font-size: 24px;
-  margin: 160px 0 3rem 0;
+  margin: 160px 2rem 3rem 0;
   text-indent: 4ch;
-  width: 49ch;
+  width: 40ch;
 }
 body #projetos header .section-description a {
-  text-decoration: none;
   font-weight: bold;
   color: var(--gray1);
 }
@@ -248,6 +246,7 @@ body #cursos {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url(./assets/cursos_decorator.png);
 }
 body #cursos header {
   display: flex;
@@ -267,14 +266,42 @@ body #cursos header .section-title .decorator {
 body #cursos header .section-description {
   color: var(--gray2);
   font-size: 24px;
-  margin: 160px 0 3rem 0;
+  margin: 160px 2rem 3rem 0;
   text-indent: 4ch;
-  width: 49ch;
+  width: 40ch;
 }
 body #cursos header .section-description a {
-  text-decoration: none;
   font-weight: bold;
   color: var(--gray1);
+}
+body #cursos .courses-list {
+  list-style: none;
+}
+body #cursos .courses-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85ch;
+  margin: 1rem 0 1rem 0;
+}
+body #cursos .courses-list-item .course-year {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--blue1);
+}
+body #cursos .courses-list-item .course-info .course-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--gray1);
+}
+body #cursos .courses-list-item .course-info .course-institution {
+  font-size: 20px;
+  color: var(--gray2);
+  font-weight: 500;
+  text-align: end;
+}
+body #cursos .courses-list-item .course-info .course-institution::before {
+  content: "- ";
 }
 body #contato {
   position: relative;
@@ -305,12 +332,11 @@ body #contato header .section-title .decorator {
 body #contato header .section-description {
   color: var(--gray2);
   font-size: 24px;
-  margin: 160px 0 3rem 0;
+  margin: 160px 2rem 3rem 0;
   text-indent: 4ch;
-  width: 49ch;
+  width: 40ch;
 }
 body #contato header .section-description a {
-  text-decoration: none;
   font-weight: bold;
   color: var(--gray1);
 }/*# sourceMappingURL=style.css.map */
