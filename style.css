@@ -313,6 +313,8 @@ body #contato {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url(./assets/contato_decorator.png);
+  align-items: flex-end;
 }
 body #contato header {
   display: flex;
@@ -339,4 +341,13 @@ body #contato header .section-description {
 body #contato header .section-description a {
   font-weight: bold;
   color: var(--gray1);
+}
+body #contato header {
+  margin-bottom: 2rem;
+}
+body #contato .contato-email, body #contato .contato-tel {
+  color: var(--gray1);
+  font-size: 36px;
+  font-weight: bold;
+  margin: 1rem 2rem 0 2rem;
 }/*# sourceMappingURL=style.css.map */

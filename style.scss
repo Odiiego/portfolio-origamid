@@ -282,5 +282,18 @@ body {
 
     #contato {
         @include section-config;
+        background-image: url(./assets/contato_decorator.png);
+        align-items: flex-end;
+
+        header {
+            margin-bottom: 2rem;
+        }
+
+        .contato-email, .contato-tel {
+            color: var(--gray1);
+            font-size: 36px;
+            font-weight: bold;
+            margin: 1rem 2rem 0 2rem;
+        }
     }
 }
